@@ -84,7 +84,7 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tighter leading-[1.05] mb-6">
               Building
-              <span className="gradient-text"> Digital</span> Precision
+              <span className="gradient-text"> Digital</span> Solutions
             </motion.h1>
 
 
@@ -94,7 +94,7 @@ export default function Hero() {
             >
               <Typewriter
                 words={[
-                  "Senior Full Stack Engineer specializing in high-performance web architectures and elegant user experiences."
+                  "Full Stack Engineer building scalable web applications with clean architecture and exceptional user experiences."
                 ]}
                 loop={3}
                 cursor
