@@ -95,8 +95,7 @@ export default function Hero() {
             >
               <Typewriter
                 words={[
-                  "Full Stack Engineer building scalable web applications with clean architecture and exceptional user experiences."
-                ]}
+             "Hi, I'm Md. Husne Jaman Shahed. A Full Stack Engineer building scalable web applications with clean architecture and exceptional user experiences."                ]}
                 loop={2}
                 cursor
                 cursorStyle="|"
