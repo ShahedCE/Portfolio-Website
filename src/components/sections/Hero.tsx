@@ -128,13 +128,13 @@ export default function Hero() {
 
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-bold text-number mb-1">
-                  8<span className="text-number">+</span>
+                  1<span className="text-number">+</span>
                 </span>
                 <span className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest">Years Experience</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-bold text-number mb-1">
-                  120<span className="text-number">+</span>
+                  6<span className="text-number">+</span>
                 </span>
                 <span className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest">Projects Delivered</span>
               </div>
