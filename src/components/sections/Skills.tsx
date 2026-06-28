@@ -99,7 +99,7 @@ const itemVariants: Variants = {
 
 export default function Skills() {
     return (
-        <section id="skills" className="w-full bg-black relative py-24 overflow-hidden">
+        <section id="skills" className="w-full relative py-24 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6  md:px-12">
 
                 {/* Section Heading */}
