@@ -32,8 +32,8 @@ const projects: Project[] = [
     ],
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
-    codeLink: "#",
-    liveLink: "#",
+    codeLink: "https://github.com/ShahedCE/NeuroFlight_Lab_Backend",
+    liveLink: "https://github.com/ShahedCE/NeuroFlight_Lab_Frontend",
   },
   {
     title: "CMAB Official Website",
@@ -51,7 +51,7 @@ const projects: Project[] = [
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
     liveLink: "https://cmabdhaka.com/",
-    codeLink: "#",
+    codeLink: "https://github.com/ShahedCE/CMAB_Backend",
   },
   {
     title: "Shop Management System",
@@ -70,8 +70,8 @@ const projects: Project[] = [
     ],
     techStack: ["ASP.NET Core", "C#", "Entity Framework", "MySQL"],
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-    codeLink: "#",
-    liveLink: "#",
+    codeLink: "https://github.com/ShahedCE/ASP-.NET-3Tier-Core-API",
+    liveLink: "https://github.com/ShahedCE/ASP-.NET-3Tier-Core-API",
   },
   {
     title: "Laundry Management System",
@@ -88,8 +88,8 @@ const projects: Project[] = [
     ],
     techStack: ["React", "Node.js", "Express.js", "PostgreSQL", "Tailwind CSS"],
     image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=2070&auto=format&fit=crop",
-    codeLink: "#",
-    liveLink: "#",
+    codeLink: "https://github.com/ShahedCE/My_Laundry_Frontend",
+    liveLink: "https://github.com/ShahedCE/My_Laundry_Backend",
   },
 ];
 
