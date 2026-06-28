@@ -16,6 +16,7 @@ import {
   SiDotnet
 } from "react-icons/si";
 import { IconType } from "react-icons";
+import AnimatedCounter from "../AnimatedCounter";
 
 const techList = [
   {
@@ -96,7 +97,7 @@ export default function Hero() {
                 words={[
                   "Full Stack Engineer building scalable web applications with clean architecture and exceptional user experiences."
                 ]}
-                loop={3}
+                loop={2}
                 cursor
                 cursorStyle="|"
                 typeSpeed={40}
@@ -128,19 +129,22 @@ export default function Hero() {
 
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-bold text-number mb-1">
-                  1<span className="text-number">+</span>
+                  <AnimatedCounter value={1} />
+                  <span className="text-number">+</span>
                 </span>
                 <span className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest">Years Experience</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-bold text-number mb-1">
-                  6<span className="text-number">+</span>
+                  <AnimatedCounter value={6} />
+                  <span className="text-number">+</span>
                 </span>
                 <span className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest">Projects Delivered</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-bold text-number mb-1">
-                  15<span className="text-number">+</span>
+                  <AnimatedCounter value={15} />
+                  <span className="text-number">+</span>
                 </span>
                 <span className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest">Full-Stack Tech</span>
               </div>
@@ -214,9 +218,9 @@ export default function Hero() {
           <div className="flex overflow-hidden ">
             <motion.div
               className="flex items-center gap-24 pr-16"
-              animate={{ x: ["0%", "-50%"] }}
+              animate={{ x: ["0.65%", "-49.8%"] }}
               transition={{
-                duration: 20,
+                duration: 15,
                 repeat: Infinity,
                 ease: "linear"
               }}

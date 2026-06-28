@@ -39,7 +39,7 @@ export default function RootLayout({
               try {
                 let theme = window.localStorage.getItem('theme');
                 if (!theme) {
-                  theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  theme = 'dark';
                 }
                 if (theme === 'dark') {
                   document.documentElement.classList.add('dark');
@@ -52,7 +52,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col transition-colors duration-300">
-        <ThemeProvider defaultTheme="system">
+        <ThemeProvider defaultTheme="dark">
           <Navbar />
           {children}
           <Footer />

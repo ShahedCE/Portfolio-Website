@@ -127,7 +127,7 @@ export default function Contact() {
                     id="contact-name"
                     type="text"
                     required
-                    placeholder="John Doe"
+                    placeholder="Enter Your Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className={`w-full px-4 py-3.5 rounded-xl border border-black/10 dark:border-white/20 text-foreground placeholder:text-gray-500
@@ -146,7 +146,7 @@ export default function Contact() {
                     id="contact-email"
                     type="email"
                     required
-                    placeholder="john.doe@example.com"
+                    placeholder="Enter Your Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3.5 rounded-xl border border-black/10 dark:border-white/20 text-foreground placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors bg-white/20 dark:bg-[#29293c]/20"
@@ -177,7 +177,7 @@ export default function Contact() {
                 className="w-full py-4 mt-1 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition-colors"
                 disabled={false}
               >
-                Submit Protocol
+                Submit 
               </button>
               {/* Success message shown below form */}
               {showSuccess && (
