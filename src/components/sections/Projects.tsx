@@ -160,28 +160,20 @@ export default function Projects() {
           </div>
 
           <motion.div variants={itemVariants} className="flex items-center gap-4">
-            <Link
-              href="#projects"
-              className="group flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors mr-4"
-            >
-              All Projects
-              <span className="transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-                →
-              </span>
-            </Link>
+           
 
             {/* Navigation Arrows */}
             <div className="flex items-center gap-2">
               <button
                 onClick={scrollLeft}
-                className="w-10 h-10 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-foreground"
+                className="w-10 h-10 rounded-full border border-black/10 dark:border-white/10 dark:bg-white/15 flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/25 transition-colors text-foreground"
                 aria-label="Previous project"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={scrollRight}
-                className="w-10 h-10 rounded-full border border-black/10 dark:border-white/10 flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-foreground"
+                className="w-10 h-10 rounded-full border border-black/10 dark:border-white/10 dark:bg-white/15 flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/25 transition-colors text-foreground"
                 aria-label="Next project"
               >
                 <ChevronRight className="w-5 h-5" />

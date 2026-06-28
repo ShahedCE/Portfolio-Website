@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 
@@ -28,8 +28,19 @@ export default function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 2000);
+    setFormData({ name: "", email: "", message: "" });
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3000);
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowSuccess(false);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, [showSuccess]);
 
   return (
     <section
@@ -104,7 +115,7 @@ export default function Contact() {
               onSubmit={handleSubmit}
               className="flex flex-col gap-5"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="contact-name"
@@ -119,10 +130,8 @@ export default function Contact() {
                     placeholder="John Doe"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    // Set lighter backgrounds for inputs
-                    className="w-full px-4 py-3.5 rounded-xl bg-white/80 dark:bg-white/10 border 
-                    border-black/10 dark:border-white/20 text-foreground placeholder:text-gray-500
-                     focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors"
+                    className={`w-full px-4 py-3.5 rounded-xl border border-black/10 dark:border-white/20 text-foreground placeholder:text-gray-500
+                     focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors ${formData.name ? 'bg-transparent dark:bg-transparent' : 'bg-white/20 dark:bg-[#29293c]/20'}`}
                     disabled={false}
                   />
                 </div>
@@ -140,7 +149,7 @@ export default function Contact() {
                     placeholder="john.doe@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3.5 rounded-xl bg-white/80 dark:bg-white/10 border border-black/10 dark:border-white/20 text-foreground placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors"
+                    className="w-full px-4 py-3.5 rounded-xl border border-black/10 dark:border-white/20 text-foreground placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors bg-white/20 dark:bg-[#29293c]/20"
                     disabled={false}
                   />
                 </div>
@@ -159,7 +168,7 @@ export default function Contact() {
                   placeholder="Description of Your Vision..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/80 dark:bg-white/10 border border-black/10 dark:border-white/20 text-foreground placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors resize-none"
+                  className="w-full px-4 py-3.5 rounded-xl border border-black/10 dark:border-white/20 text-foreground placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-colors bg-white/20 dark:bg-[#29293c]/20 resize-none"
                   disabled={false}
                 />
               </div>
