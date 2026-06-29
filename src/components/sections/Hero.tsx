@@ -248,10 +248,10 @@ function MarqueeItem({
   return (
     <div className="group flex items-center gap-4 cursor-pointer">
       <div className="w-10 h-10 rounded-lg bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center">
-        <Icon className="text-xl text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-gray-50" />
+        <Icon className="text-xl text-gray-900 dark:text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-white" />
       </div>
 
-      <span className="text-3xl font-bold tracking-wide text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-gray-50">
+      <span className="text-3xl font-bold tracking-wide text-gray-900 dark:text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-white">
         {name}
       </span>
     </div>
