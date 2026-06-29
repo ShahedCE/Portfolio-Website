@@ -46,7 +46,9 @@ const techList = [
 ];
 
 export default function Hero() {
-  const containerVariants: Variants = {
+
+  
+  const containerVariants: Variants = { //for all the items in the container
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -56,7 +58,7 @@ export default function Hero() {
     },
   };
 
-  const itemVariants: Variants = {
+  const itemVariants: Variants = {   //for each item in the container
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
@@ -72,7 +74,7 @@ export default function Hero() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-          >
+           >
             {/* Availability Badge */}
             <motion.div variants={itemVariants} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 mb-8">
               <span className="relative flex h-2 w-2">
@@ -173,7 +175,7 @@ export default function Hero() {
             <motion.div
               className="absolute bottom-10 left-10 p-5 rounded-2xl bg-white/50 dark:bg-black/50 backdrop-blur-md border border-black/10 dark:border-white/10 w-[240px] shadow-2xl"
               animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
             >
               {/* macOS style window controls */}
               <div className="flex items-center gap-2 mb-4">
@@ -219,7 +221,7 @@ export default function Hero() {
               className="flex items-center gap-24 pr-16"
               animate={{ x: ["0.65%", "-49.8%"] }}
               transition={{
-                duration: 15,
+                duration: 20,
                 repeat: Infinity,
                 ease: "linear"
               }}
@@ -246,10 +248,10 @@ function MarqueeItem({
   return (
     <div className="group flex items-center gap-4 cursor-pointer">
       <div className="w-10 h-10 rounded-lg bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center">
-        <Icon className="text-xl text-gray-500 transition-colors duration-300 group-hover:text-black dark:group-hover:text-gray-100" />
+        <Icon className="text-xl text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-gray-50" />
       </div>
 
-      <span className="text-3xl font-bold tracking-wide text-gray-500 transition-colors duration-300 group-hover:text-black dark:group-hover:text-gray-100">
+      <span className="text-3xl font-bold tracking-wide text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-gray-50">
         {name}
       </span>
     </div>
