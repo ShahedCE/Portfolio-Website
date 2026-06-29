@@ -206,7 +206,7 @@ export default function Projects() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="relative group shrink-0 w-[85vw] md:w-[600px] h-[760px] md:h-[600px] rounded-3xl overflow-hidden snap-center border border-black/10 dark:border-white/10"
+                className="relative group shrink-0 w-[85vw] md:w-[600px] h-[740px] md:h-[600px] rounded-3xl overflow-hidden snap-center border border-black/10 dark:border-white/10"
               >
                 {/* Background Image */}
                 <img

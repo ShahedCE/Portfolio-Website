@@ -132,47 +132,48 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-  variants={menuVariants}
-  initial="closed"
-  animate="open"
-  exit="closed"
-  className="fixed left-0 right-0 rounded-b-2xl top-[72px] z-40 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl border-b border-black/5 dark:border-white/5 shadow-xl md:hidden"
->
-  <div className="flex flex-col items-center gap-7 py-8">
-              {[
-                { href: "#about", label: "About" },
-                { href: "#skills", label: "Skills" },
-                { href: "#experience", label: "Experience" },
-                { href: "#projects", label: "Projects" },
-                { href: "#education", label: "Education" },
-                { href: "#contact", label: "Contact" },
-              ].map((item) => (
-                <motion.div key={item.href} variants={itemVariants}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-2xl font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.div variants={itemVariants} className="mt-2">
-                <Link
-                  href="/resume.pdf"
-                  onClick={() => setIsOpen(false)}
-                  className="px-8 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
-                >
-                  Resume
-                </Link>
-              </motion.div>
-            </div>
+     {/* Mobile Menu */}
+<AnimatePresence>
+  {isOpen && (
+    <motion.div
+      variants={menuVariants}
+      initial="closed"
+      animate="open"
+      exit="closed"
+      className="fixed inset-x-0 top-[72px] z-40 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl border-b border-black/5 dark:border-white/5 shadow-xl rounded-b-2xl md:hidden"
+    >
+      <div className="flex flex-col py-8">
+        {[
+          { href: "#about", label: "About" },
+          { href: "#skills", label: "Skills" },
+          { href: "#experience", label: "Experience" },
+          { href: "#projects", label: "Projects" },
+          { href: "#education", label: "Education" },
+          { href: "#contact", label: "Contact" },
+        ].map((item) => (
+          <motion.div key={item.href} variants={itemVariants} className="w-full">
+            <Link
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-center w-full py-4 text-2xl font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+            >
+              {item.label}
+            </Link>
           </motion.div>
-        )}
-      </AnimatePresence>
+        ))}
+        <motion.div variants={itemVariants} className="flex justify-center mt-4 pb-2">
+          <Link
+            href="/resume.pdf"
+            onClick={() => setIsOpen(false)}
+            className="px-8 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            Resume
+          </Link>
+        </motion.div>
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
     </nav>
   );
 }
