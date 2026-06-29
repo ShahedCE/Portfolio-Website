@@ -170,9 +170,11 @@ export default function Education() {
           
           </motion.div>
         </div>
-      </div>
-        {/* Image Grid */}
-        <motion.div variants={itemVariants} className="mt-16 pl-8 md:pl-12 mx-auto max-w-7xl min-w-0">
+         {/* Image Grid */}
+        <motion.div variants={itemVariants}
+             initial="hidden"
+              whileInView={{ opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }}
+             className="mt-16 mx-auto max-w-7xl min-w-0">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
                 {[
                   {
@@ -211,7 +213,7 @@ export default function Education() {
                 ))}
               </div>
             </motion.div>
-    </section>
-    
+         </div>
+       </section>  
   );
 }

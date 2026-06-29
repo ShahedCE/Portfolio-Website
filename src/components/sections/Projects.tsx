@@ -23,14 +23,18 @@ const projects: Project[] = [
     description:
       "Designed and developed a modern, responsive website for NeuroFlight Lab to showcase research activities, publications, team members, and ongoing projects. The platform emphasizes performance, accessibility, and a clean user experience.",
     keyFeatures: [
-      "Modern and responsive UI",
-      "Research and publication showcase",
-      "Team member profiles",
-      "Project and news management",
-      "Contact section",
-      "SEO-friendly structure",
-    ],
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "Responsive modern UI",
+  "Research & publication showcase",
+  "Team member profiles",
+  "News & event management",
+  "Job circular management",
+  "Admin content management",
+  "Contact inquiry system",
+  "SEO-optimized architecture",
+  "Role-based authentication",
+  "REST API integration",
+],
+    techStack: ["Next.js","NestJS", "React", "TypeScript", "Tailwind CSS", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
     codeLink: "https://github.com/ShahedCE/NeuroFlight_Lab_Backend",
     liveLink: "https://github.com/ShahedCE/NeuroFlight_Lab_Frontend",
@@ -40,15 +44,19 @@ const projects: Project[] = [
     category: "Organization Website",
     description:
       "Developed the official website for CMAB with a professional and responsive interface. The platform presents organizational information, announcements, services, and contact details while ensuring a seamless user experience across all devices.",
-    keyFeatures: [
-      "Responsive multi-page website",
-      "Dynamic content management",
-      "Organization information",
-      "News and announcements",
-      "Contact and inquiry section",
-      "Optimized performance",
-    ],
-    techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+keyFeatures: [
+  "Responsive public website",
+  "Secure admin dashboard",
+  "Authentication & authorization",
+  "Content management (CRUD)",
+  "Executive member management",
+  "News & publication management",
+  "File and image uploads",
+  "Join CMAB & contact forms",
+  "REST API integration",
+  "SEO-friendly & optimized",
+],
+    techStack: ["Next.js", "NestJS", "React", "Tailwind CSS", "TypeScript","PostgreSQL"],
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
     liveLink: "https://cmabdhaka.com/",
     codeLink: "https://github.com/ShahedCE/CMAB_Backend",
@@ -81,12 +89,11 @@ const projects: Project[] = [
     keyFeatures: [
       "Customer management",
       "Order and service tracking",
-      "Payment management",
+      "Picking location by map",
       "Role-based authentication",
-      "Dashboard and reports",
       "Responsive interface",
     ],
-    techStack: ["React", "Node.js", "Express.js", "PostgreSQL", "Tailwind CSS"],
+     techStack: ["Next.js","NestJS", "React", "TypeScript", "Tailwind CSS", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=2070&auto=format&fit=crop",
     codeLink: "https://github.com/ShahedCE/My_Laundry_Frontend",
     liveLink: "https://github.com/ShahedCE/My_Laundry_Backend",
@@ -199,7 +206,7 @@ export default function Projects() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="relative group shrink-0 w-[85vw] md:w-[600px] h-[520px] md:h-[560px] rounded-3xl overflow-hidden snap-center border border-black/10 dark:border-white/10"
+                className="relative group shrink-0 w-[85vw] md:w-[600px] h-[760px] md:h-[600px] rounded-3xl overflow-hidden snap-center border border-black/10 dark:border-white/10"
               >
                 {/* Background Image */}
                 <img
@@ -245,7 +252,7 @@ export default function Projects() {
                   <div className="flex items-end justify-between w-full pt-2">
                     <div className="flex flex-wrap gap-2 max-w-[60%]">
                       {project.techStack.map((tech, i) => (
-                        <span key={i} className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
+                        <span key={i} className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-white text-[10px] font-bold tracking-wider">
                           {tech}
                         </span>
                       ))}
