@@ -38,7 +38,9 @@ const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+    transition: {
+      staggerChildren: 0.15,
+    },
   },
 };
 
@@ -55,8 +57,11 @@ export default function Education() {
   return (
     <section id="education" className="w-full relative py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
-          {/* Left Column */}
+        
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-24">
+          
+          {/* Left Column - Heading */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -72,13 +77,21 @@ export default function Education() {
                 Academic Path
               </span>
             </motion.div>
-
+            
             <motion.h2
               variants={itemVariants}
               className="text-4xl md:text-5xl font-bold tracking-tighter mb-6 text-foreground"
             >
               Education
             </motion.h2>
+
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center gap-3 px-4 py-2.5 bg-black/5 dark:bg-white/5 rounded-lg border border-black/10 dark:border-white/10 mb-8 w-fit"
+            >
+              <Terminal className="w-4 h-4 text-primary" />
+              <code className="text-sm font-mono text-foreground/80">npx portfolio --edu</code>
+            </motion.div>
 
             <motion.p
               variants={itemVariants}
@@ -88,17 +101,16 @@ export default function Education() {
             </motion.p>
           </motion.div>
 
-          {/* Right Column — Timeline */}
+          {/* Right Column - Timeline */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
-            className="lg:col-span-8 relative lg:pl-12 min-w-0"
+            className="lg:col-span-8 relative lg:pl-12"
           >
-           
-
-            <div className="absolute left-[7px] lg:left-[55px] top-2 bottom-0 w-[2px] bg-linear-to-b from-primary/80 via-black/10 dark:via-white/10 to-transparent" />
+            {/* Vertical Line */}
+            <div className="absolute left-[7px] lg:left-[55px] top-2 bottom-0 w-[2px] bg-linear-to-b from-primary/80 via-black/10 dark:via-white/10 to-transparent"></div>
 
             <div className="flex flex-col gap-16">
               {educations.map((edu, index) => (
@@ -107,8 +119,10 @@ export default function Education() {
                   variants={itemVariants}
                   className="relative pl-8 md:pl-12 group"
                 >
-                  <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-background border-2 border-primary ring-4 ring-background z-10 transition-transform duration-300 group-hover:scale-125" />
+                  {/* Timeline Dot */}
+                  <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-background border-2 border-primary ring-4 ring-background z-10 transition-transform duration-300 group-hover:scale-125"></div>
 
+                  {/* Content */}
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2 sm:gap-4">
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                       {edu.degree}
@@ -117,17 +131,22 @@ export default function Education() {
                       {edu.date}
                     </span>
                   </div>
-
+                  
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="text-lg text-gray-500 font-medium">{edu.institution}</span>
+                    <span className="text-lg text-gray-500 font-medium">
+                      {edu.institution}
+                    </span>
                     {edu.gpa && (
                       <>
                         <span className="text-gray-400">•</span>
-                        <span className="text-sm font-semibold text-gray-500">{edu.gpa}</span>
+                        <span className="text-sm font-semibold text-gray-500">
+                          {edu.gpa}
+                        </span>
                       </>
                     )}
                   </div>
 
+                  {/* Tags */}
                   {edu.tags && edu.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mb-6">
                       {edu.tags.map((tag, i) => (
@@ -141,6 +160,7 @@ export default function Education() {
                     </div>
                   )}
 
+                  {/* Bullets */}
                   {edu.bullets && edu.bullets.length > 0 && (
                     <ul className="space-y-4 text-gray-600 dark:text-gray-400 mb-8">
                       {edu.bullets.map((bullet, i) => (
@@ -154,66 +174,47 @@ export default function Education() {
                 </motion.div>
               ))}
             </div>
-
-            {/* Professional Certifications — commented out
-            <motion.div variants={itemVariants} className="mt-24 pl-8 md:pl-12">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
-                <h3 className="text-2xl font-bold text-foreground">Professional Certifications</h3>
-                <span className="text-sm font-bold text-[#8b5cf6] uppercase tracking-widest">Continuous</span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                AWS + Meta cards...
-              </div>
-            </motion.div>
-            */}
-
-          
           </motion.div>
         </div>
-         {/* Image Grid */}
-        <motion.div variants={itemVariants}
-             initial="hidden"
-              whileInView={{ opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }}
-             className="mt-16 mx-auto max-w-7xl min-w-0">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
-                {[
-                  {
-                    src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-                    alt: "Foundations",
-                    label: "Foundations",
-                    caption: "The craft of clean code.",
-                  },
-                  {
-                    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
-                    alt: "Architecture",
-                    label: "Architecture",
-                    caption: "Scaling distributed systems.",
-                  },
-                  {
-                    src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
-                    alt: "Experience",
-                    label: "Experience",
-                    caption: "Designing for human impact.",
-                  },
-                ].map(({ src, alt, label, caption }) => (
-                  <div key={label} className="relative h-60 rounded-2xl overflow-hidden group min-w-0">
-                    <img
-                      src={src}
-                      alt={alt}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                    <div className="absolute inset-0 p-5 flex flex-col justify-end">
-                      <span className="text-[10px] font-bold text-primary uppercase tracking-wider mb-1">
-                        {label}
-                      </span>
-                      <span className="text-sm font-medium text-white">{caption}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-         </div>
-       </section>  
+        
+        {/* 3 Images Grid - Full Width within max-w-7xl */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
+        >
+          {/* Image 1 */}
+          <motion.div variants={itemVariants} className="relative h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" alt="Foundations" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+              <span className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Foundations</span>
+              <span className="text-base md:text-lg font-medium text-white">The craft of clean code.</span>
+            </div>
+          </motion.div>
+          {/* Image 2 */}
+          <motion.div variants={itemVariants} className="relative h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" alt="Architecture" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+              <span className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Architecture</span>
+              <span className="text-base md:text-lg font-medium text-white">Scaling distributed systems.</span>
+            </div>
+          </motion.div>
+          {/* Image 3 */}
+          <motion.div variants={itemVariants} className="relative h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden group shadow-lg">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Experience" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+            <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+              <span className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Experience</span>
+              <span className="text-base md:text-lg font-medium text-white">Designing for human impact.</span>
+            </div>
+          </motion.div>
+        </motion.div>
+
+      </div>
+    </section>
   );
 }

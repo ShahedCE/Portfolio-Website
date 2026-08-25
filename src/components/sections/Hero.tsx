@@ -124,6 +124,46 @@ export default function Hero() {
               </Link>
             </motion.div>
 
+            {/* Mobile Visual (Visible only on mobile/tablet, right after buttons) */}
+            <motion.div
+              variants={itemVariants}
+              className="relative w-full h-[400px] sm:h-[500px] rounded-3xl overflow-hidden block lg:hidden border border-black/10 dark:border-white/10 mb-12"
+            >
+              <div className="absolute inset-0 bg-zinc-900">
+                <img
+                  src="https://i.postimg.cc/85VYvwzJ/1.jpg"
+                  alt="Portrait"
+                  className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent"></div>
+              </div>
+              
+              <div className="absolute bottom-6 left-6 p-4 rounded-2xl bg-white/50 dark:bg-black/50 backdrop-blur-md border border-black/10 dark:border-white/10 w-[200px] shadow-2xl">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                </div>
+                <div className="space-y-2.5 font-mono text-[10px]">
+                  <div className="flex items-center gap-2">
+                    <span className="text-primary">const</span>
+                    <span className="text-foreground">developer</span>
+                    <span className="text-gray-400">=</span>
+                    <span className="text-yellow-300">true</span>
+                    <span className="text-gray-400">;</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-primary">await</span>
+                    <span className="text-blue-400">buildFuture</span>
+                    <span className="text-gray-400">();</span>
+                  </div>
+                  <div className="h-1 w-full bg-black/10 dark:bg-white/10 rounded-full mt-3"></div>
+                  <div className="h-1 w-4/5 bg-primary/40 rounded-full"></div>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Stats Row */}
             <motion.div variants={itemVariants} className="grid grid-cols-3 gap-6 md:gap-12 w-full pt-8 relative">
               <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-black/20 dark:from-white/20 to-transparent"></div>
@@ -152,9 +192,9 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Visual */}
+          {/* Right Column - Visual (Desktop only) */}
           <motion.div
-            className="lg:col-span-5 relative w-full h-[400px] sm:h-[500px] lg:h-[650px] rounded-3xl overflow-hidden hidden md:block border border-black/10 dark:border-white/10"
+            className="lg:col-span-5 relative w-full h-[650px] rounded-3xl overflow-hidden hidden lg:block border border-black/10 dark:border-white/10"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
