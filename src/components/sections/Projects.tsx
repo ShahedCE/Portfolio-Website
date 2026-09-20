@@ -33,7 +33,7 @@ const projects: Project[] = [
     ],
     techStack: ["Next.js", "React", "NestJS", "PostgreSQL", "Tailwind CSS"],
     image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2069&auto=format&fit=crop",
-    liveLink: "https://quikey.store.com",
+    liveLink: "https://quikey.store",
   },
   {
     title: "Neexzen",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     ],
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    liveLink: "https://neexzen.neexzen-official.workers.dev/",
+    liveLink: "https://neexzen.app/",
   },
   {
     title: "Real-time Request Service Management System",
@@ -72,18 +72,18 @@ const projects: Project[] = [
     description:
       "Designed and developed a modern, responsive website for NeuroFlight Lab to showcase research activities, publications, team members, and ongoing projects. The platform emphasizes performance, accessibility, and a clean user experience.",
     keyFeatures: [
-  "Responsive modern UI",
-  "Research & publication showcase",
-  "Team member profiles",
-  "News & event management",
-  "Job circular management",
-  "Admin content management",
-  "Contact inquiry system",
-  "SEO-optimized architecture",
-  "Role-based authentication",
-  "REST API integration",
-],
-    techStack: ["Next.js","NestJS", "React", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+      "Responsive modern UI",
+      "Research & publication showcase",
+      "Team member profiles",
+      "News & event management",
+      "Job circular management",
+      "Admin content management",
+      "Contact inquiry system",
+      "SEO-optimized architecture",
+      "Role-based authentication",
+      "REST API integration",
+    ],
+    techStack: ["Next.js", "NestJS", "React", "TypeScript", "Tailwind CSS", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop",
     codeLink: "https://github.com/ShahedCE/NeuroFlight_Lab_Backend",
     liveLink: "https://github.com/ShahedCE/NeuroFlight_Lab_Frontend",
@@ -93,19 +93,19 @@ const projects: Project[] = [
     category: "Organization Website",
     description:
       "Developed the official website for CMAB with a professional and responsive interface. The platform presents organizational information, announcements, services, and contact details while ensuring a seamless user experience across all devices.",
-keyFeatures: [
-  "Responsive public website",
-  "Secure admin dashboard",
-  "Authentication & authorization",
-  "Content management (CRUD)",
-  "Executive member management",
-  "News & publication management",
-  "File and image uploads",
-  "Join CMAB & contact forms",
-  "REST API integration",
-  "SEO-friendly & optimized",
-],
-    techStack: ["Next.js", "NestJS", "React", "Tailwind CSS", "TypeScript","PostgreSQL"],
+    keyFeatures: [
+      "Responsive public website",
+      "Secure admin dashboard",
+      "Authentication & authorization",
+      "Content management (CRUD)",
+      "Executive member management",
+      "News & publication management",
+      "File and image uploads",
+      "Join CMAB & contact forms",
+      "REST API integration",
+      "SEO-friendly & optimized",
+    ],
+    techStack: ["Next.js", "NestJS", "React", "Tailwind CSS", "TypeScript", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
     liveLink: "https://cmabdhaka.com/",
     codeLink: "https://github.com/ShahedCE/CMAB_Backend",
@@ -138,7 +138,7 @@ export default function Projects() {
       if (scrollRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
         const shiftAmount = (scrollRef.current.firstElementChild?.clientWidth || 0) + 24;
-        
+
         // If we reached the end (with a buffer), scroll back to the start
         if (Math.ceil(scrollLeft + clientWidth) >= scrollWidth - 10) {
           scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
@@ -218,7 +218,7 @@ export default function Projects() {
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          
+
           <button
             onClick={handleScrollRight}
             className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-background/80 backdrop-blur border border-black/10 dark:border-white/10 flex items-center justify-center hover:bg-background transition-all text-foreground shadow-lg opacity-0 group-hover/carousel:opacity-100"
