@@ -109,44 +109,7 @@ keyFeatures: [
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
     liveLink: "https://cmabdhaka.com/",
     codeLink: "https://github.com/ShahedCE/CMAB_Backend",
-  },
-  {
-    title: "Shop Management System",
-    category: "Backend Web Application",
-    description:
-      "Developed the backend of a Shop Management System using ASP.NET Core and a Three-Tier Architecture. The project focused on implementing business logic, database operations, and a maintainable architecture for managing shop-related data through RESTful APIs.",
-    keyFeatures: [
-      "Three-Tier Architecture",
-      "RESTful API Development",
-      "CRUD Operations",
-      "Product Management",
-      "Customer Management",
-      "Payment Management",
-      "Entity Framework Core Integration",
-      "MySQL Database Integration",
-    ],
-    techStack: ["ASP.NET Core", "C#", "Entity Framework", "MySQL"],
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-    codeLink: "https://github.com/ShahedCE/ASP-.NET-3Tier-Core-API",
-    liveLink: "https://github.com/ShahedCE/ASP-.NET-3Tier-Core-API",
-  },
-  {
-    title: "Laundry Management System",
-    category: "Full Stack Web Application",
-    description:
-      "Built a comprehensive laundry management system to streamline customer orders, service tracking, payment management, and operational workflows. The system includes secure authentication and role-based access control for efficient business management.",
-    keyFeatures: [
-      "Customer management",
-      "Order and service tracking",
-      "Picking location by map",
-      "Role-based authentication",
-      "Responsive interface",
-    ],
-     techStack: ["Next.js","NestJS", "React", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=2070&auto=format&fit=crop",
-    codeLink: "https://github.com/ShahedCE/My_Laundry_Frontend",
-    liveLink: "https://github.com/ShahedCE/My_Laundry_Backend",
-  },
+  }
 ];
 
 const containerVariants: Variants = {
@@ -273,7 +236,7 @@ export default function Projects() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="relative group shrink-0 w-[85vw] md:w-[calc(50%-12px)] h-[740px] md:h-[600px] rounded-3xl overflow-hidden snap-center border border-black/10 dark:border-white/10"
+                className="relative group shrink-0 w-[85vw] md:w-[calc(50%-12px)] h-[740px] md:h-[600px] rounded-3xl overflow-hidden snap-start border border-black/10 dark:border-white/10"
               >
                 {/* Background Image */}
                 <img

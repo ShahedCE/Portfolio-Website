@@ -17,7 +17,7 @@ const educations: EducationItem[] = [
     degree: "Bachelor of Science in Computer Science & Engineering",
     institution: "American International University-Bangladesh (AIUB)",
     date: "2022 – 2026",
-    gpa: "CGPA: 3.89 / 4.00 (Expected Graduation July 2026)",
+    gpa: "CGPA: 3.89 / 4.00",
     bullets: [
       "Specialized in Software Engineering, Web Development, Database Systems, and Object-Oriented Programming.",
       "Completed academic and full-stack software development projects using modern technologies.",
@@ -57,10 +57,10 @@ export default function Education() {
   return (
     <section id="education" className="w-full relative py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        
+
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-24">
-          
+
           {/* Left Column - Heading */}
           <motion.div
             initial="hidden"
@@ -77,7 +77,7 @@ export default function Education() {
                 Academic Path
               </span>
             </motion.div>
-            
+
             <motion.h2
               variants={itemVariants}
               className="text-4xl md:text-5xl font-bold tracking-tighter mb-6 text-foreground"
@@ -131,7 +131,7 @@ export default function Education() {
                       {edu.date}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-lg text-gray-500 font-medium">
                       {edu.institution}
@@ -176,9 +176,9 @@ export default function Education() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* 3 Images Grid - Full Width within max-w-7xl */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}

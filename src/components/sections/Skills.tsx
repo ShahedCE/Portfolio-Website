@@ -21,7 +21,8 @@ import {
     SiNextdotjs,
     SiTailwindcss,
     SiNestjs,
-    SiDotnet,
+    SiSocketdotio,
+    SiRedis,
     SiPostman,
 } from "react-icons/si";
 
@@ -53,7 +54,7 @@ const skillCategories: SkillCategory[] = [
         skills: [
             { name: "Node.js", icon: FaNodeJs },
             { name: "NestJS", icon: SiNestjs },
-            { name: "ASP.NET Core", icon: SiDotnet },
+            { name: "Socket.io / WebSocket", icon: SiSocketdotio },
             { name: "REST API", icon: FaNetworkWired },
         ],
     },
@@ -61,6 +62,7 @@ const skillCategories: SkillCategory[] = [
         title: "Database",
         skills: [
             { name: "PostgreSQL", icon: FaDatabase },
+            { name: "Redis", icon: SiRedis },
             { name: "SQL Server", icon: FaDatabase },
             { name: "Oracle", icon: FaDatabase },
         ],

@@ -36,7 +36,7 @@ const experiences: ExperienceItem[] = [
     description:
       "Designing and developing full-stack web applications from concept to deployment using modern frontend and backend technologies. Focused on building scalable, responsive, and user-centric solutions while following clean architecture and industry best practices.",
     bullets: [
-      "Developed full-stack applications using React, Next.js, Node.js, NestJS, and ASP.NET Core.",
+      "Developed full-stack applications using React, Next.js, Node.js, NestJS, Socket.io, and Redis.",
       "Built responsive and accessible user interfaces with Tailwind CSS and TypeScript.",
       "Designed and integrated RESTful APIs for seamless frontend-backend communication.",
       "Worked with PostgreSQL and Microsoft SQL Server for database design and management.",
@@ -45,7 +45,7 @@ const experiences: ExperienceItem[] = [
       "Managed source code with Git and GitHub.",
       "Built and maintained multiple real-world portfolio and SaaS-based projects.",
     ],
-    tags: ["TypeScript", "Next.js", "NestJS", "ASP.NET Core", "SQL Server"],
+    tags: ["TypeScript", "Next.js", "NestJS", "Socket.io", "Redis", "PostgreSQL"],
   },
 ];
 

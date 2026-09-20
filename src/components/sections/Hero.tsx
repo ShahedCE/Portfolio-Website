@@ -4,44 +4,68 @@ import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
-import {
-  FaReact,
-  FaNodeJs
-} from "react-icons/fa";
-
-import {
-  SiNextdotjs,
-  SiNestjs,
-  SiPostgresql,
-  SiDotnet
-} from "react-icons/si";
-import { IconType } from "react-icons";
 import AnimatedCounter from "../AnimatedCounter";
 
-const techList = [
+interface TechItem {
+  name: string;
+  icon: string;
+  color: string;
+  border: string;
+  bg: string;
+  invertDark?: boolean;
+}
+
+const techList: TechItem[] = [
   {
     name: "React",
-    icon: FaReact,
+    icon: "/tech-icons/react.svg",
+    color: "text-[#61DAFB]",
+    border: "border-[#61DAFB]/25 group-hover/item:border-[#61DAFB]",
+    bg: "bg-[#61DAFB]/10",
   },
   {
     name: "Next.js",
-    icon: SiNextdotjs,
+    icon: "/tech-icons/nextjs.svg",
+    color: "text-black dark:text-white",
+    border: "border-black/20 dark:border-white/20 group-hover/item:border-black dark:group-hover/item:border-white",
+    bg: "bg-black/5 dark:bg-white/5",
+    invertDark: true,
   },
   {
     name: "Node.js",
-    icon: FaNodeJs,
+    icon: "/tech-icons/nodejs.svg",
+    color: "text-[#5FA04E]",
+    border: "border-[#5FA04E]/25 group-hover/item:border-[#5FA04E]",
+    bg: "bg-[#5FA04E]/10",
   },
   {
     name: "Nest.js",
-    icon: SiNestjs,
+    icon: "/tech-icons/nestjs.svg",
+    color: "text-[#E0234E]",
+    border: "border-[#E0234E]/25 group-hover/item:border-[#E0234E]",
+    bg: "bg-[#E0234E]/10",
   },
   {
-    name: "ASP.NET",
-    icon: SiDotnet,
+    name: "Socket.io",
+    icon: "/tech-icons/socketio.svg",
+    color: "text-black dark:text-white",
+    border: "border-black/20 dark:border-white/20 group-hover/item:border-black dark:group-hover/item:border-white",
+    bg: "bg-black/5 dark:bg-white/5",
+    invertDark: true,
+  },
+  {
+    name: "Redis",
+    icon: "/tech-icons/redis.svg",
+    color: "text-[#DC382D]",
+    border: "border-[#DC382D]/25 group-hover/item:border-[#DC382D]",
+    bg: "bg-[#DC382D]/10",
   },
   {
     name: "PostgreSQL",
-    icon: SiPostgresql,
+    icon: "/tech-icons/postgresql.svg",
+    color: "text-[#4169E1]",
+    border: "border-[#4169E1]/25 group-hover/item:border-[#4169E1]",
+    bg: "bg-[#4169E1]/10",
   },
 ];
 
@@ -248,29 +272,29 @@ export default function Hero() {
 
       {/* Fade Edge Marquee */}
       <div className="w-full max-w-7xl mx-auto mt-24 mb-12 relative overflow-hidden">
-        {/* Subtle top/bottom borders for the marquee strip */}
-        <div className="absolute inset-0  "></div>
+        <div className="absolute inset-0"></div>
 
-        <div className=" mx-auto px-6 md:px-12 relative py-8">
-          <div className="absolute left-0 top-0 bottom-0 w-56 bg-linear-to-r from-background  via-background/95 to-transparent z-20 pointer-events-none"></div>
+        <div className="mx-auto px-6 md:px-12 relative py-8">
+          <div className="absolute left-0 top-0 bottom-0 w-56 bg-linear-to-r from-background via-background/95 to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-56 bg-linear-to-l from-background via-background/95 to-transparent z-20 pointer-events-none"></div>
 
-          <div className="absolute right-0 top-0 bottom-0 w-56 bg-linear-to-l from-background  via-background/95 to-transparent z-20 pointer-events-none"></div>
-
-          <div className="flex overflow-hidden ">
-            <motion.div
-              className="flex items-center gap-24 pr-16"
-              animate={{ x: ["0.65%", "-49.8%"] }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: "linear"
-              }}
+          <div className="flex overflow-hidden group">
+            <div
+              className="flex items-center gap-24 pr-24 animate-marquee group-hover:[animation-play-state:paused]"
               style={{ width: "max-content" }}
             >
               {[...techList, ...techList].map((tech, i) => (
-                <MarqueeItem key={i} name={tech.name} icon={tech.icon} />
+                <MarqueeItem
+                  key={i}
+                  name={tech.name}
+                  icon={tech.icon}
+                  color={tech.color}
+                  border={tech.border}
+                  bg={tech.bg}
+                  invertDark={tech.invertDark}
+                />
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -280,18 +304,23 @@ export default function Hero() {
 
 function MarqueeItem({
   name,
-  icon: Icon,
-}: {
-  name: string;
-  icon: IconType;
-}) {
+  icon,
+  color,
+  border,
+  bg,
+  invertDark,
+}: TechItem) {
   return (
-    <div className="group flex items-center gap-4 cursor-pointer">
-      <div className="w-10 h-10 rounded-lg bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center">
-        <Icon className="text-xl text-gray-900 dark:text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-white" />
+    <div className="group/item flex items-center gap-4 cursor-pointer transition-transform duration-300 hover:scale-105">
+      <div className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300 shadow-sm ${bg} ${border}`}>
+        <img
+          src={icon}
+          alt={name}
+          className={`w-7 h-7 object-contain transition-transform duration-300 group-hover/item:scale-110 ${invertDark ? "dark:invert" : ""}`}
+        />
       </div>
 
-      <span className="text-3xl font-bold tracking-wide text-gray-900 dark:text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-white">
+      <span className={`text-3xl font-bold tracking-wide transition-colors duration-300 ${color}`}>
         {name}
       </span>
     </div>
