@@ -13,6 +13,22 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    title: "Junior Software Developer",
+    company: "Neexzen",
+    date: "May 2026 – Present",
+    description:
+      "Developing scalable, high-performance web applications and enterprise features. Leading end-to-end implementation across modern frontend interfaces, robust backend services, real-time communications, and background task queues.",
+    bullets: [
+      "Developed scalable web applications and reusable frontend components using Next.js and TypeScript.",
+      "Built real-time communication features with Socket.IO for instant, poll-free updates.",
+      "Implemented Redis caching and BullMQ job queues to improve API performance and offload long-running background tasks.",
+      "Engineered modern scroll-based animations and interactive UI using GSAP and ScrollTrigger.",
+      "Built RESTful APIs, SaaS features, authentication, and third-party integrations with NestJS and PostgreSQL.",
+      "Optimized website performance (reducing LCP by 27% and TBT by 86%) and contributed to debugging and production deployment.",
+    ],
+    tags: ["Next.js", "TypeScript", "NestJS", "PostgreSQL", "Redis", "BullMQ", "Socket.IO", "GSAP"],
+  },
+  {
     title: "Software Developer Intern",
     company: "Neuroflight Lab",
     date: "Feb 2026 – Apr 2026",
@@ -28,24 +44,6 @@ const experiences: ExperienceItem[] = [
       "Followed Agile development practices and software engineering best practices.",
     ],
     tags: ["React", "Next.js", "Tailwind", "Node.js", "NestJS", "PostgreSQL"],
-  },
-  {
-    title: "Full Stack Developer",
-    company: "Personal Projects",
-    date: "May 2024 – Present",
-    description:
-      "Designing and developing full-stack web applications from concept to deployment using modern frontend and backend technologies. Focused on building scalable, responsive, and user-centric solutions while following clean architecture and industry best practices.",
-    bullets: [
-      "Developed full-stack applications using React, Next.js, Node.js, NestJS, Socket.io, and Redis.",
-      "Built responsive and accessible user interfaces with Tailwind CSS and TypeScript.",
-      "Designed and integrated RESTful APIs for seamless frontend-backend communication.",
-      "Worked with PostgreSQL and Microsoft SQL Server for database design and management.",
-      "Implemented authentication, authorization, and role-based access control.",
-      "Optimized application performance, maintainability, and code quality.",
-      "Managed source code with Git and GitHub.",
-      "Built and maintained multiple real-world portfolio and SaaS-based projects.",
-    ],
-    tags: ["TypeScript", "Next.js", "NestJS", "Socket.io", "Redis", "PostgreSQL"],
   },
 ];
 

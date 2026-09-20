@@ -25,6 +25,7 @@ import {
     SiSocketdotio,
     SiPostgresql,
     SiRedis,
+    SiMysql,
     SiPostman,
     SiDocker,
 } from "react-icons/si";
@@ -65,6 +66,7 @@ const skillCategories: SkillCategory[] = [
         title: "Database",
         skills: [
             { name: "PostgreSQL", icon: SiPostgresql },
+            { name: "MySQL", icon: SiMysql },
             { name: "Redis", icon: SiRedis },
             { name: "SQL Server", icon: DiMsqlServer },
             { name: "Oracle", icon: GrOracle },
