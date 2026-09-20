@@ -19,53 +19,60 @@ const techList: TechItem[] = [
   {
     name: "React",
     icon: "/tech-icons/react.svg",
-    color: "text-[#61DAFB]",
-    border: "border-[#61DAFB]/25 group-hover/item:border-[#61DAFB]",
-    bg: "bg-[#61DAFB]/10",
+    color: "group-hover/item:text-[#0284c7] dark:group-hover/item:text-[#38bdf8]",
+    border: "group-hover/item:border-[#0284c7]/50 dark:group-hover/item:border-[#38bdf8]/70",
+    bg: "group-hover/item:bg-[#0284c7]/10 dark:group-hover/item:bg-[#38bdf8]/15",
   },
   {
     name: "Next.js",
     icon: "/tech-icons/nextjs.svg",
-    color: "text-black dark:text-white",
-    border: "border-black/20 dark:border-white/20 group-hover/item:border-black dark:group-hover/item:border-white",
-    bg: "bg-black/5 dark:bg-white/5",
+    color: "group-hover/item:text-black dark:group-hover/item:text-white",
+    border: "group-hover/item:border-black/40 dark:group-hover/item:border-white/70",
+    bg: "group-hover/item:bg-black/10 dark:group-hover/item:bg-white/15",
     invertDark: true,
   },
   {
     name: "Node.js",
     icon: "/tech-icons/nodejs.svg",
-    color: "text-[#5FA04E]",
-    border: "border-[#5FA04E]/25 group-hover/item:border-[#5FA04E]",
-    bg: "bg-[#5FA04E]/10",
+    color: "group-hover/item:text-[#16a34a] dark:group-hover/item:text-[#4ade80]",
+    border: "group-hover/item:border-[#16a34a]/50 dark:group-hover/item:border-[#4ade80]/70",
+    bg: "group-hover/item:bg-[#16a34a]/10 dark:group-hover/item:bg-[#4ade80]/15",
   },
   {
     name: "Nest.js",
     icon: "/tech-icons/nestjs.svg",
-    color: "text-[#E0234E]",
-    border: "border-[#E0234E]/25 group-hover/item:border-[#E0234E]",
-    bg: "bg-[#E0234E]/10",
+    color: "group-hover/item:text-[#e11d48] dark:group-hover/item:text-[#fb7185]",
+    border: "group-hover/item:border-[#e11d48]/50 dark:group-hover/item:border-[#fb7185]/70",
+    bg: "group-hover/item:bg-[#e11d48]/10 dark:group-hover/item:bg-[#fb7185]/15",
   },
   {
     name: "Socket.io",
     icon: "/tech-icons/socketio.svg",
-    color: "text-black dark:text-white",
-    border: "border-black/20 dark:border-white/20 group-hover/item:border-black dark:group-hover/item:border-white",
-    bg: "bg-black/5 dark:bg-white/5",
+    color: "group-hover/item:text-black dark:group-hover/item:text-white",
+    border: "group-hover/item:border-black/40 dark:group-hover/item:border-white/70",
+    bg: "group-hover/item:bg-black/10 dark:group-hover/item:bg-white/15",
     invertDark: true,
+  },
+  {
+    name: "Docker",
+    icon: "/tech-icons/docker.svg",
+    color: "group-hover/item:text-[#0284c7] dark:group-hover/item:text-[#38bdf8]",
+    border: "group-hover/item:border-[#0284c7]/50 dark:group-hover/item:border-[#38bdf8]/70",
+    bg: "group-hover/item:bg-[#0284c7]/10 dark:group-hover/item:bg-[#38bdf8]/15",
   },
   {
     name: "Redis",
     icon: "/tech-icons/redis.svg",
-    color: "text-[#DC382D]",
-    border: "border-[#DC382D]/25 group-hover/item:border-[#DC382D]",
-    bg: "bg-[#DC382D]/10",
+    color: "group-hover/item:text-[#dc2626] dark:group-hover/item:text-[#ef4444]",
+    border: "group-hover/item:border-[#dc2626]/50 dark:group-hover/item:border-[#ef4444]/70",
+    bg: "group-hover/item:bg-[#dc2626]/10 dark:group-hover/item:bg-[#ef4444]/15",
   },
   {
     name: "PostgreSQL",
     icon: "/tech-icons/postgresql.svg",
-    color: "text-[#4169E1]",
-    border: "border-[#4169E1]/25 group-hover/item:border-[#4169E1]",
-    bg: "bg-[#4169E1]/10",
+    color: "group-hover/item:text-[#2563eb] dark:group-hover/item:text-[#60a5fa]",
+    border: "group-hover/item:border-[#2563eb]/50 dark:group-hover/item:border-[#60a5fa]/70",
+    bg: "group-hover/item:bg-[#2563eb]/10 dark:group-hover/item:bg-[#60a5fa]/15",
   },
 ];
 
@@ -271,16 +278,16 @@ export default function Hero() {
       </div>
 
       {/* Fade Edge Marquee */}
-      <div className="w-full max-w-7xl mx-auto mt-24 mb-12 relative overflow-hidden">
-        <div className="absolute inset-0"></div>
+      <div className="w-full max-w-7xl mx-auto mt-10 md:mt-14 mb-8 md:mb-10 relative overflow-hidden">
+        <div className="mx-auto px-6 md:px-12 relative py-4 md:py-6">
+          {/* Smooth Fade Edges */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 md:w-52 bg-gradient-to-r from-background to-transparent z-20"></div>
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 md:w-52 bg-gradient-to-l from-background to-transparent z-20"></div>
 
-        <div className="mx-auto px-6 md:px-12 relative py-8">
-          <div className="absolute left-0 top-0 bottom-0 w-56 bg-linear-to-r from-background via-background/95 to-transparent z-20 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-56 bg-linear-to-l from-background via-background/95 to-transparent z-20 pointer-events-none"></div>
-
-          <div className="flex overflow-hidden group">
+          {/* Marquee Track Container */}
+          <div className="flex overflow-hidden group py-3 [mask-image:linear-gradient(to_right,transparent_0%,black_80px,black_calc(100%-80px),transparent_100%)]">
             <div
-              className="flex items-center gap-24 pr-24 animate-marquee group-hover:[animation-play-state:paused]"
+              className="flex items-center gap-24 pr-24 animate-marquee py-2"
               style={{ width: "max-content" }}
             >
               {[...techList, ...techList].map((tech, i) => (
@@ -311,16 +318,20 @@ function MarqueeItem({
   invertDark,
 }: TechItem) {
   return (
-    <div className="group/item flex items-center gap-4 cursor-pointer transition-transform duration-300 hover:scale-105">
-      <div className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300 shadow-sm ${bg} ${border}`}>
+    <div className="group/item flex items-center gap-4 cursor-pointer transition-transform duration-300 hover:scale-105 py-2">
+      <div
+        className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300 border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] ${bg} ${border}`}
+      >
         <img
           src={icon}
           alt={name}
-          className={`w-7 h-7 object-contain transition-transform duration-300 group-hover/item:scale-110 ${invertDark ? "dark:invert" : ""}`}
+          className={`w-7 h-7 object-contain transition-all duration-300 grayscale opacity-60 dark:opacity-40 group-hover/item:grayscale-0 group-hover/item:opacity-100 group-hover/item:scale-110 ${invertDark ? "dark:invert" : ""}`}
         />
       </div>
 
-      <span className={`text-3xl font-bold tracking-wide transition-colors duration-300 ${color}`}>
+      <span
+        className={`text-3xl font-bold tracking-wide transition-colors duration-300 text-gray-500 dark:text-gray-400 ${color}`}
+      >
         {name}
       </span>
     </div>

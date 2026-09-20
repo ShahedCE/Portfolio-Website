@@ -4,6 +4,8 @@ import { motion, Variants } from "framer-motion";
 import { IconType } from "react-icons";
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandVisualStudio } from "react-icons/tb";
+import { DiMsqlServer } from "react-icons/di";
+import { GrOracle } from "react-icons/gr";
 import {
     FaHtml5,
     FaCss3Alt,
@@ -12,7 +14,6 @@ import {
     FaGitAlt,
     FaGithub,
     FaTrello,
-    FaDatabase,
     FaNetworkWired,
 } from "react-icons/fa";
 import {
@@ -22,8 +23,10 @@ import {
     SiTailwindcss,
     SiNestjs,
     SiSocketdotio,
+    SiPostgresql,
     SiRedis,
     SiPostman,
+    SiDocker,
 } from "react-icons/si";
 
 interface Skill {
@@ -61,10 +64,10 @@ const skillCategories: SkillCategory[] = [
     {
         title: "Database",
         skills: [
-            { name: "PostgreSQL", icon: FaDatabase },
+            { name: "PostgreSQL", icon: SiPostgresql },
             { name: "Redis", icon: SiRedis },
-            { name: "SQL Server", icon: FaDatabase },
-            { name: "Oracle", icon: FaDatabase },
+            { name: "SQL Server", icon: DiMsqlServer },
+            { name: "Oracle", icon: GrOracle },
         ],
     },
     {
@@ -75,6 +78,7 @@ const skillCategories: SkillCategory[] = [
             { name: "VS Code", icon: VscVscode },
             { name: "Visual Studio", icon: TbBrandVisualStudio },
             { name: "Postman", icon: SiPostman },
+            { name: "Docker", icon: SiDocker },
             { name: "Trello", icon: FaTrello },
         ],
     },
