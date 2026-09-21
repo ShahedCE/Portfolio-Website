@@ -149,6 +149,9 @@ export default function Hero() {
               </Link>
               <Link
                 href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="Md_Husne_Jaman_Shahed_Resume.pdf"
                 className="flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-transparent text-foreground font-medium rounded-lg border border-black/20 dark:border-white/20 hover:border-black dark:hover:border-white hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300"
               >
                 Download Resume

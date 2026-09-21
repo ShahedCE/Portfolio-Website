@@ -95,6 +95,8 @@ export default function Navbar() {
         <ThemeToggle />
         <Link
           href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:block px-5 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
         >
           Resume
@@ -164,6 +166,8 @@ export default function Navbar() {
         <motion.div variants={itemVariants} className="flex justify-center mt-4 pb-2">
           <Link
             href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="px-8 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
           >
